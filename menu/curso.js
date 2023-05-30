@@ -26,9 +26,10 @@ var contenidoTablaResultado = document.querySelector('#resultados');
                             <td>${valor.usuario}</td>
                            
                             <td>
-                              <a name="" id="" class="btn btn-danger" onclick="eliminar('${valor.id}')" role="button">Borrar</a>
+                              <a name="" id="" class="btn btn-danger" onclick="modalDelete('${valor.id}', '${valor.nombre}',
+                              '${valor.descripcion}')" role="button">Borrar</a>
                               ||
-                              <a name="" id="" class="btn btn-primary" onclick="editar('${valor.id}', '${valor.nombre}', '${valor.descripcion}', '${valor.tiempo}')" role="button">Editar</a>
+                              <a name="" id="" class="btn btn-primary" onclick="editarModal('${valor.id}', '${valor.nombre}', '${valor.descripcion}', '${valor.tiempo}','${valor.usuario}')" role="button">Editar</a>
                             </td>
                         </tr>`; 
         }
@@ -36,4 +37,4 @@ var contenidoTablaResultado = document.querySelector('#resultados');
 
  
 
-    cargarDatos();
+cargarDatos();

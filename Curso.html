@@ -14,9 +14,10 @@
 </head>
 
 <body>
-    <div class="container-fluid bg-primary">      
+    <div class="container-fluid bg-primary">     
   <header>
     <div id="contenidoMenu" ></div>
+    <button type="create" class="btn btn-primary fs-3" onclick="abrirModal()">Crear curso</button> 
   </header>
   <main>
     <div class="table-responsive">
@@ -51,7 +52,7 @@
 <!-- Modal trigger button -->
 
 
-  <div class="modal fade" id="modalId" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+  <div class="modal fade" id="modalCreate" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
     <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -94,6 +95,93 @@
     </div>
   </div>
 
+  <!-- Modal editar -->
+  <div class="modal fade" id="modalEditar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitleId">Editar</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="formularioEditar">
+            <input type="hidden" id="idEditar" name="idEditar">
+            <div class="mb-3">
+              
+              <label for="" class="form-label">Nombre</label>
+              <input type="text"
+                class="form-control" name="nombreEditar" id="nombreEditar" aria-describedby="helpId" placeholder="Nombre del curso">
+              <small id="helpId" class="form-text text-muted">Ingresa el nombre del curso</small>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Descripcion</label>
+                <input type="text"
+                  class="form-control" name="descripcionEditar" id="descripcionEditar" aria-describedby="helpId" placeholder="Descripcion del curso">
+                <small id="helpId" class="form-text text-muted">Ingresa la Descripcion del curso</small>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Tiempo</label>
+                <input type="text"
+                  class="form-control" name="tiempoEditar" id="tiempoEditar" aria-describedby="helpId" placeholder="Tiempo del curso">
+                <small id="helpId" class="form-text text-muted">Ingresa el Tiempo del curso</small>
+              </div>         
+              <div class="mb-3">
+                <button type="reset" class="btn btn-danger">Modificar</button>
+                <button type="submit" class="btn btn-primary">Borrar</button>
+  
+              </div>                         
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Modal eliminar -->
+    <div class="modal fade" id="modalEliminar" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalTitleId">Editar</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="formularioEliminar">
+              <input type="hidden" id="idEliminar" name="idEliminar">
+              <div class="mb-3">
+                
+                <label for="" class="form-label">Id</label>
+                <input type="text"
+                  class="form-control" name="idEliminar" id="idEliminar" aria-describedby="helpId" disabled>
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="nombreEliminar" id="nombreEliminar"
+                  aria-describedby="helpId"  disabled>
+              </div>
+              <div class="mb-3">
+                  <label for="" class="form-label">Descripcion</label>
+                  <input type="text"
+                    class="form-control" name="descripcionEliminar" id="descripcionEliminar" aria-describedby="helpId" placeholder="Descripcion del curso">
+                  <small id="helpId" class="form-text text-muted">Ingresa la Descripcion del curso</small>
+                </div>
+                        
+                         
+          </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" onclick="eliminarCurso()">Aceptar</button>
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+    
+          </div>
+        </div>
+      </div>
+    </div>
+
+
 </div>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -106,7 +194,12 @@
 
   <script src="menu/menu.js"></script>
 
+  <script src="cursojs/createcurso.js"></script>
   <script src="menu/curso.js"></script>
+  <script src="cursojs/editcurso.js"></script>
+  <script src="cursojs/eliminarcurso.js"></script>
+
+
 
 
   
