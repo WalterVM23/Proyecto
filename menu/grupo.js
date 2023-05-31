@@ -24,9 +24,10 @@ var contenidoTablaResultado = document.querySelector('#resultados');
                            
                            
                             <td>
-                              <a name="" id="" class="btn btn-danger" onclick="eliminar('${valor.id}')" role="button">Borrar</a>
+
+                              <a name="" id="" class="btn btn-danger" onclick="modalEliminarG('${valor.id}','${valor.nombre}')" role="button">Borrar</a>
                               ||
-                              <a name="" id="" class="btn btn-primary" onclick="editar('${valor.id}', '${valor.nombre}')" role="button">Editar</a>
+                              <a name="" id="" class="btn btn-primary" onclick="editarModalG('${valor.id}', '${valor.nombre}')" role="button">Editar</a>
                             </td>
                         </tr>`; 
         }
@@ -34,4 +35,3 @@ var contenidoTablaResultado = document.querySelector('#resultados');
 
  
 
-    cargarDatos();
