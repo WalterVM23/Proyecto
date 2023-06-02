@@ -1,4 +1,4 @@
-const editarG = new bootstrap.Modal(document.getElementById('modalEditar'))
+const editarG = new bootstrap.Modal(document.getElementById('modalEditarG'))
 
 let formularioGrupo =document.getElementById('formularioEditarG');
 
