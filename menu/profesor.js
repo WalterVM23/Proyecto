@@ -36,9 +36,23 @@ var contenidoTablaResultado = document.querySelector('#resultados');
                             
                            
                             <td>
-                              <a name="" id="" class="btn btn-danger" onclick="eliminar('${valor.id}')" role="button">Borrar</a>
+                              <a name="" id="" class="btn btn-danger" onclick="modalProfesorE('${valor.id}','${valor.nombre}','${valor.apellidopaterno}','${valor.apellidomaterno}')" role="button">Borrar</a>
                               ||
-                              <a name="" id="" class="btn btn-primary" onclick="editar('${valor.id}', '${valor.nombre}', '${valor.descripcion}', '${valor.tiempo}')" role="button">Editar</a>
+                              <a name="" id="" class="btn btn-primary" onclick="editarModalP(
+                                '${valor.id}',
+                                '${valor.cedula}',
+                                '${valor.correoelectronico}',
+                                '${valor.telefono}',
+                                '${valor.telefonocelular}',
+                                '${valor.fechanacimiento}',
+                                '${valor.sexo}',
+                                '${valor.direccion}',
+                                '${valor.nombre}',
+                                '${valor.apellidopaterno}',
+                                '${valor.apellidomaterno}',
+                                '${valor.idCarreras}',
+                                '${valor.usuario}',
+                                '${valor.nacionalidad}')" role="button">Modificar</a>
                             </td>
                         </tr>`; 
         }

@@ -14,9 +14,11 @@
 </head>
 <div class="container-fluid bg-primary">
 
+
 <body>
   <header>
     <div id="contenidoMenu" ></div>
+    <button type="create" class="btn btn-primary fs-3" onclick="abrirModalP()">Crear Profesor</button>
   </header>
   <main>
     <div class="table-responsive">
@@ -42,6 +44,7 @@
                     <th>idCarreras</th>
                     <th>usuario</th>
                     <th>nacionalidad</th>
+
                 </tr>
                 </thead>
                 <tbody class="table-group-divider" id="resultados">
@@ -56,6 +59,244 @@
   <footer>
     <!-- place footer here -->
   </footer>
+  <!-- MODAL CREEAR -->
+  <div class="modal fade" id="modalCreateP" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-dark" id="modalTitleId">Agregar Profesor</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="modal-body-bar">
+          <form id="formularioP">
+            <div class="mb-3">
+              <label for="" class="form-label">Cedula</label>
+              <input type="text"
+                class="form-control" name="cedulaAg" id="cedulaAg"  placeholder="Ingrese la cedula del profesor">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Correo Electronico</label>
+              <input type="email"
+                class="form-control" name="correoelectronicoAg" id="correoelectronicoAg"  placeholder="Ingrese el correo electronico del profesor">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Telefono</label>
+              <input type="text"
+                class="form-control" name="telefonoAg" id="telefonoAg"  placeholder="Ingrese el telefono del profesor">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Telefono celular</label>
+              <input type="text"
+                class="form-control" name="telefonocelularAg" id="telefonocelularAg"  placeholder="Ingrese el telefono celular del profesor">
+  
+            </div>
+  
+            <div class="mb-3">
+              <label for="" class="form-label">Fecha de nacimiento</label>
+              <input type="date"
+                class="form-control" name="fechanacimientoAg" id="fechanacimientoAg"  placeholder="Ingrese la fecha de nacimiento del profesor">
+  
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Sexo</label>
+              <input type="text"
+                class="form-control" name="sexoAg" id="sexoAg"  placeholder="Ingrese el sexo del profesor">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Direccion</label>
+              <input type="text"
+                class="form-control" name="direccionAg" id="direccionAg"  placeholder="Ingrese la direccion del profesor">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Nombre</label>
+              <input type="text"
+                class="form-control" name="nombreAg" id="nombreAg"  placeholder="Ingrese el nombre del profesor">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Apellido paterno</label>
+              <input type="text"
+                class="form-control" name="apellidopaternoAg" id="apellidopaternoAg"  placeholder="Ingrese el apellido paterno del profesor">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Apellido materno</label>
+              <input type="text"
+                class="form-control" name="apellidomaternoAg" id="apellidomaternoAg"  placeholder="Ingrese el apellido materno del profesor">
+            </div>
+            
+            <div class="mb-3">
+              <label for="" class="form-label">Carreras</label>
+              <input type="text"
+                class="form-control" name="idCarrerasAg" id="idCarrerasAg"  placeholder="Ingrese id Carrera">
+            </div>
+           
+            <div class="mb-3">
+              <label for="" class="form-label">nacionalidad</label>
+              <input type="text"
+                class="form-control" name="nacionalidadAg" id="nacionalidadAg"  placeholder="Ingrese la nacionalidad del profesor">
+            </div>
+             
+              <div class="mb-3"  >
+                <button type="submit" class="btn btn-primary">Insertar</button>
+                <button type="reset"  class="btn btn-danger">Borrar</button>
+                
+              </div>
+        </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL EDITAR -->
+  <div class="modal fade" id="modalEditarP" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog"
+aria-labelledby="modalTitleId" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title text-dark" id="modalTitleId">Modificar Profesores</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body" id="modal-body-barm">
+      <form id="formularioEditarP">
+        <input type="hidden" id="idEditarP" name="idEditarP">
+
+        <div class="mb-3">
+          <label for="" class="form-label">Cedula</label>
+          <input type="text" class="form-control" name="cedulaEditarP" id="cedulaEditarP" aria-describedby="helpId"
+            placeholder="Ingresa la cedula del profesor">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Correo Electronico</label>
+          <input type="email" class="form-control" name="correoelectronicoEditarP" id="correoelectronicoEditarP" aria-describedby="helpId"
+            placeholder="Ingresa el correo electronico del profesor">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Telefono</label>
+          <input type="text" class="form-control" name="telefonoEditarP" id="telefonoEditarP" aria-describedby="helpId"
+            placeholder="Ingresa el telefono del profesor">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Telefono Celular</label>
+          <input type="text" class="form-control" name="telefonocelularEditarP" id="telefonocelularEditarP" aria-describedby="helpId"
+            placeholder="Ingresa el telefono celular del profesor">
+        </div>
+
+        <div class="mb-3">
+          <label for="" class="form-label">Fecha de Nacimiento</label>
+          <input type="date" class="form-control" name="fechanacimientoEditarP" id="fechanacimientoEditarP" aria-describedby="helpId"
+            placeholder="Ingresa la fecha de nacimiento del profesor: Year-Month-Day">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Sexo</label>
+          <input type="text" class="form-control" name="sexoEditarP" id="sexoEditarP" aria-describedby="helpId"
+            placeholder="Ingresa el sexo del profesor">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Direccion</label>
+          <input type="text" class="form-control" name="direccionEditarP" id="direccionEditarP" aria-describedby="helpId"
+            placeholder="Ingresa la direccion del profesor">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Nombre</label>
+          <input type="text" class="form-control" name="nombreEditarP" id="nombreEditarP" aria-describedby="helpId"
+            placeholder="Ingresa el nombre del profesor">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Apellido paterno</label>
+          <input type="text" class="form-control" name="apellidopaternoEditarP" id="apellidopaternoEditarP" aria-describedby="helpId"
+            placeholder="Ingresa el apellido paterno del profesor">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Apellido Materno</label>
+          <input type="text" class="form-control" name="apellidomaternoEditarP" id="apellidomaternoEditarP" aria-describedby="helpId"
+            placeholder="Ingresa el apellido materno del profesor">
+        </div>
+        <div class="mb-3">
+          <label for="idCarreras" class="form-label">Carreras</label>
+          <input type="text"
+            class="form-control" name="idCarrerasEditarP" id="idCarrerasEditarP"  placeholder="Ingresa id Carrera">
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Usuario</label>
+          <input type="text" class="form-control" name="usuarioEditarP" id="usuarioEditarP" aria-describedby="helpId"
+            placeholder="Ingresa el usuario del profesor" disabled>
+        </div>
+        <div class="mb-3">
+          <label for="" class="form-label">Nacionalidad</label>
+          <input type="text" class="form-control" name="nacionalidadEditarP" id="nacionalidadEditarP" aria-describedby="helpId"
+            placeholder="Ingresa la nacionalidad del profesor">
+        </div>
+        <div class="mb-3" >
+          <button type="submit" class="btn btn-primary">Modificar</button>
+          <button type="reset"  class="btn btn-danger">Borrar</button>
+        </div>
+      </form>
+    </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+  </div>
+</div>
+</div>
+
+
+<!-- modal eliminar -->
+<div class="modal fade" id="modalEliminarP" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+role="dialog" aria-labelledby="Eliminar" aria-hidden="true">
+<div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title text-dark" id="Eliminar">Eliminar Profesor</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  </div>
+  <div class="modal-body">
+
+    <h5>¿Quieres eliminar este registro?</h5>
+    <br>
+    <form id="formularioEliminarP">
+      <div class="mb-3">
+        <label for="" class="form-label">Id</label>
+        <input type="text" class="form-control" name="idEliminar" id="idEliminar"
+          aria-describedby="helpId" placeholder="Ingresa el nombre del profesor" disabled>
+      </div>
+
+      <div class="mb-3">
+          <label for="" class="form-label">Cedula</label>
+          <input type="text" class="form-control" name="cedulaEliminar" id="cedulaEliminar"
+            aria-describedby="helpId" placeholder="Ingresa el nombre del profesor" disabled>
+        </div>
+
+      <div class="mb-3">
+        <label for="" class="form-label">Nombre</label>
+        <input type="text" class="form-control" name="nombreEliminar" id="nombreEliminar"
+          aria-describedby="helpId" placeholder="Ingresa el nombre del profesor" disabled>
+      </div>
+
+      <div class="mb-3">
+        <label for="" class="form-label">Apellido Paterno</label>
+        <input type="text" class="form-control" name="apellidopaterno" id="apellidopaterno"
+          aria-describedby="helpId" placeholder="Ingresa el nombre del profesor" disabled>
+      </div>
+
+      <div class="mb-3">
+        <label for="" class="form-label">Apellido Materno</label>
+        <input type="text" class="form-control" name="apellidomaterno" id="apellidomaterno"
+          aria-describedby="helpId" placeholder="Ingresa el nombre del profesor" disabled>
+      </div>
+
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-danger" onclick="eliminarProfesor()">Aceptar</button>
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+  </div>
+</div>
+</div>
+</div>
+
+
 </div>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -67,6 +308,9 @@
   </script>
   <script src="menu/menu.js"></script>
   <script src="menu/profesor.js"></script>
+  <script src="profesores.js/createprofesor.js"></script>
+  <script src="profesores.js/editprofesor.js"></script>
+  <script src="profesores.js/eliminarprofesor.js"></script>
   
 <div class="text-center mb-2 bg-dark text-primary">
     <p>
