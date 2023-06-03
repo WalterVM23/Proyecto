@@ -36,7 +36,7 @@ var contenidoTablaResultado = document.querySelector('#resultados');
                             
                            
                             <td>
-                              <a name="" id="" class="btn btn-danger" onclick="modalEstudianteE('${valor.id}','${valor.nombre}','${valor.apellidopaterno}','${valor.apellidomaterno}' )" role="button">Borrar</a>
+                              <a name="" id="" class="btn btn-danger" onclick="modalEstudianteE('${valor.id}','${valor.nombre}','${valor.apellidopaterno}','${valor.apellidomaterno}')" role="button">Borrar</a>
                               ||
                               <a name="" id="" class="btn btn-primary" onclick="editarModalE('${valor.id}','${valor.cedula}','${valor.correoelectronico}','${valor.telefono}',
                                 '${valor.telefonocelular}','${valor.fechanacimiento}','${valor.sexo}','${valor.direccion}','${valor.nombre}','${valor.apellidopaterno}','${valor.apellidomaterno}','${valor.nacionalidad}',

@@ -2,16 +2,16 @@ const eliminarEstudianteMo = new bootstrap.Modal(document.getElementById('modalE
 
 function modalEstudianteE(id, cedula,nombre,apellidopaterno,apellidomaterno) {
    eliminarEstudianteMo.show();
-  document.getElementById("idEliminar").value = id;
-  document.getElementById("cedulaEliminar").value = cedula;
-  document.getElementById("nombreEliminar").value = nombre;
-  document.getElementById("apellidopaterno").value = apellidopaterno;
-  document.getElementById("apellidomaterno").value = apellidomaterno;
+  document.getElementById("idEliminarE").value = id;
+  document.getElementById("cedulaEliminarE").value = cedula;
+  document.getElementById("nombreEliminarE").value = nombre;
+  document.getElementById("apellidopaternoE").value = apellidopaterno;
+  document.getElementById("apellidomaternoE").value = apellidomaterno;
 
 }
 function eliminarEstudiante() {
   const datasend = {
-    id:document.getElementById('idEliminar').value
+    id:document.getElementById('idEliminarE').value
   };
   fetch("https://paginas-web-cr.com/ApiPHP/apis/BorrarEstudiantes.php",
     {
