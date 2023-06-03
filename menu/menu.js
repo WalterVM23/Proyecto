@@ -11,19 +11,19 @@ contenidoMenu.innerHTML += `
 
                                             
                         <li class="nav-item">
-                            <a class="nav-link text-dark fs-4" href="index.html" aria-current="page">Inicio <span class="visually-hidden">(current)</span></a>
+                            <a class="nav-link text-white fs-4 " href="index.html" aria-current="page">Inicio <span class="visually-hidden">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark fs-4" href="estudiante.html">estudiantes</a>
+                            <a class="nav-link text-white fs-4 " href="estudiante.html">estudiantes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark fs-4" href="profesor.html">profesores</a>
+                            <a class="nav-link text-white fs-4 " href="profesor.html">profesores</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark fs-4" href="Curso.html">cursos</a>
+                            <a class="nav-link text-white fs-4 " href="Curso.html">cursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark fs-4" href="grupo.html">grupo</a>
+                            <a class="nav-link text-white fs-4 " href="grupo.html">grupo</a>
                         </li>           
                     </ul>
                     

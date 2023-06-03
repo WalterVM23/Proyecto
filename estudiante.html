@@ -21,7 +21,7 @@
   <header>
     <!-- place navbar here -->
     <div id="contenidoMenu" ></div>
-    <button type="create" class="btn btn-primary fs-3" onclick="abrirModalE()">Crear Estudiante</button>
+    <button type="create" class="btn btn-primary fs-3 border border-dark" onclick="abrirModalE()">Crear Estudiante</button>
 
   </header>
   <main>
@@ -59,11 +59,18 @@
     </div>
     </main>
     <footer>
-      <div class="text-center mb-2 bg-dark text-primary">
-        <p>
-          Copyright Todos los derechos reservados
-    
-        </p>
+      <div class="container-fluid">
+        <div class="row bg-dark text-white">
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <p id="columnas">Walter Vargas Meza</p>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <p id="columnas">Proyecto Multimedios</p>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4">
+                <p id="columnas">&copy;copyright</p>
+            </div>
+        </div>
     </div>
     </footer>
     <!-- MODAL CREEAR -->
@@ -301,10 +308,6 @@ role="dialog" aria-labelledby="Eliminar" aria-hidden="true">
 </div>
 </div>
 
-
-  <footer>
-    <!-- place footer here -->
-  </footer>
   </div>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"

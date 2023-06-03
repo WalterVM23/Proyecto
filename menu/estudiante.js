@@ -40,7 +40,7 @@ var contenidoTablaResultado = document.querySelector('#resultados');
                               ||
                               <a name="" id="" class="btn btn-primary" onclick="editarModalE('${valor.id}','${valor.cedula}','${valor.correoelectronico}','${valor.telefono}',
                                 '${valor.telefonocelular}','${valor.fechanacimiento}','${valor.sexo}','${valor.direccion}','${valor.nombre}','${valor.apellidopaterno}','${valor.apellidomaterno}','${valor.nacionalidad}',
-                                '${valor.idCarreras}','${valor.usuario}')" role="button">Modificar</a>
+                                '${valor.idCarreras}','${valor.usuario}')" role="button">Editar</a>
                             </td>
                         </tr>`; 
         }

@@ -52,7 +52,7 @@ var contenidoTablaResultado = document.querySelector('#resultados');
                                 '${valor.apellidomaterno}',
                                 '${valor.idCarreras}',
                                 '${valor.usuario}',
-                                '${valor.nacionalidad}')" role="button">Modificar</a>
+                                '${valor.nacionalidad}')" role="button">Editar</a>
                             </td>
                         </tr>`; 
         }
