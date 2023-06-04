@@ -25,7 +25,7 @@ function eliminarGrupo() {
         cargarDatos(); // Vuelve a cargar los datos actualizados
         alert("Eliminando datos!");
       } else {
-        alert("datos invalidos");
+        alert("Datos invalidos");
       }
     })
     .catch(function (error) {

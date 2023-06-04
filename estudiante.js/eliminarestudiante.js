@@ -25,7 +25,7 @@ function eliminarEstudiante() {
         cargarDatos(); // Vuelve a cargar los datos actualizados
         alert("Eliminando datos!");
       } else {
-        alert("Error al enviar los datos.");
+        alert("Datos invalidos");
       }
     })
     .catch(function (error) {
